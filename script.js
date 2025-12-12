@@ -173,3 +173,48 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.lang = lang; 
     }
 });
+// --- MANEJO DEL FORMULARIO (AJAX) ---
+// Esto evita que te lleve a la página de "Gracias" de Formspree
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(event) {
+        event.preventDefault(); // 1. Frena el envío tradicional
+        
+        const statusButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = statusButton.innerText;
+
+        // 2. Cambia el texto del botón para dar feedback
+        statusButton.innerText = 'Enviando...';
+        statusButton.disabled = true;
+
+        const data = new FormData(event.target);
+
+        try {
+            // 3. Envía los datos a Formspree usando Fetch (en segundo plano)
+            const response = await fetch(event.target.action, {
+                method: contactForm.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            // 4. Si salió bien:
+            if (response.ok) {
+                alert("¡Mensaje enviado con éxito! Gracias por contactarme.");
+                contactForm.reset(); // Limpia el formulario
+            } else {
+                // Si hubo error en Formspree
+                alert("Hubo un problema al enviar el mensaje. Por favor intenta nuevamente.");
+            }
+        } catch (error) {
+            // Si hubo error de red
+            alert("Error de conexión. Verifica tu internet.");
+        } finally {
+            // 5. Restaura el botón a la normalidad
+            statusButton.innerText = originalText;
+            statusButton.disabled = false;
+        }
+    });
+}

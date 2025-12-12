@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrizio - Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%231a1a1a'/><text x='50%' y='57%' dominant-baseline='middle' text-anchor='middle' fill='%2356CCF2' font-family='sans-serif' font-weight='bold' font-size='34px'>FC</text></svg>">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode"> 
+    
+    <nav class="settings-bar">
+        <div class="container">
+            <button id="theme-toggle" class="btn-icon" aria-label="Toggle light/dark mode">
+                <i class="fas fa-sun"></i> 
+            </button>
+            <div class="language-selector">
+                <button id="lang-es" class="btn-lang active" data-lang="es">ES</button>
+                <button id="lang-en" class="btn-lang" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="container">
+            <h1 data-key="heroTitle">¡Hola! Soy <span>Fabrizio</span></h1>
+            
+            <p data-key="heroSubtitle1">Estudiante de <strong>Lic. en Sistemas (UBA)</strong> con perfil técnico-funcional.</p>
+            <p data-key="heroSubtitle2">Busco conectar la estrategia de negocio con soluciones tecnológicas eficientes.</p>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary" data-key="heroBtnProjects">Ver mis Proyectos</a>
+                <a href="#contact" class="btn secondary" data-key="heroBtnContact">Contactarme</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Fabriziococca" target="_blank">🔗 GitHub</a>
+                <a href="https://www.linkedin.com/in/fabrizio-cocca-ducay-/" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 data-key="aboutTitle">Sobre Mí</h2>
+            
+            <p data-key="aboutP1">Como estudiante avanzado de la <strong>Licenciatura en Sistemas en la UBA</strong>, combino la visión sistémica de las organizaciones con la capacidad de ejecución técnica.</p>
+            <p data-key="aboutP2">Busco un rol donde pueda aplicar mi capacidad de análisis para optimizar procesos, asegurando que el software entregado aporte valor real al usuario final. Entiendo el lenguaje del negocio y la lógica de la programación, facilitando la comunicación en los proyectos.</p>
+            
+            <p data-key="aboutP3"><strong>Áreas de interés:</strong> Análisis Funcional, Arquitectura de Software, Automatización de Procesos, Cloud Computing (SaaS) y Metodologías Ágiles.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section-padding bg-dark">
+        <div class="container">
+            <h2 data-key="skillsTitle">Herramientas y Tecnologías</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-key="skillsLangTitle">Backend & Cloud</h3>
+                    <span>Python</span> <span>PostgreSQL</span> <span>Render</span> <span>Git</span>
+                </div>
+                <div class="skill-category">
+                    <h3 data-key="skillsFrontTitle">Frontend & Diseño</h3>
+                    <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span>
+                </div>
+                <div class="skill-category">
+                    <h3 data-key="skillsDbToolsTitle">Análisis & Gestión</h3>
+                    <span>SQL</span> <span>UML</span> <span>Modelado de Procesos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2 data-key="projectsTitle">Proyectos Destacados</h2>
+
+            <div class="project-item">
+                <img src="demo-bot.png" alt="Bot de discord en accion"> 
+                
+                <div class="project-info">
+                    <h3 data-key="project1Title">Sistema SaaS de Gamificación y Analytics</h3>
+                    <p data-key="project1Desc">Desarrollo y despliegue de una solución automatizada para maximizar el crecimiento de comunidades digitales. El sistema intercepta eventos en tiempo real, procesa métricas de participación y gestiona un ranking persistente en la base de datos para incentivar la actividad de los usuarios.</p>
+                    
+                    <p class="project-tech"><strong>Tech Stack:</strong> <span>Python</span> <span>PostgreSQL (Neon)</span> <span>Render Cloud</span> <span>Git/GitHub</span></p>
+                    
+                    <p class="project-highlights" data-key="project1Highlight"><strong>Highlights:</strong> Arquitectura serverless con uptime 24/7, base de datos relacional (PostgreSQL) y lógica multitenant (soporte para múltiples servidores aislados).</p>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/Fabriziococca/Contador-de-bumps" target="_blank" class="btn secondary" data-key="projectBtnCode">💻 Ver Repositorio</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-dark">
+        <div class="container">
+            <h2 data-key="contactTitle">¿Hablemos?</h2>
+            
+            <p data-key="contactP1">En búsqueda activa de nuevas oportunidades profesionales como <strong>Analista Funcional o Desarrollador</strong>.</p>
+            <p data-key="contactP2">Listo para aportar visión analítica, documentación técnica y soluciones de software concretas al equipo.</p>
+            
+            <form id="contact-form" action="https://formspree.io/f/mnnlabak" method="POST">
+                <input type="hidden" name="_next" value="https://fabriziococca.github.io/">
+                <div class="form-group">
+                    <label for="name" data-key="contactFormName">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-key="contactFormEmail">Tu Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-key="contactFormMessage">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn primary contact-submit-btn" data-key="contactFormSubmit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Fabrizio Cocca. <span data-key="footerRights">Todos los derechos reservados.</span></p>
+            <div class="footer-social">
+                <a href="https://github.com/Fabriziococca" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/fabrizio-cocca-ducay-/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

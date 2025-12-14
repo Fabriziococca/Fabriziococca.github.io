@@ -1,35 +1,37 @@
-/* Variables CSS para colores - MODO OSCURO POR DEFECTO */
+/* =========================================
+    VARIABLES & THEME CONFIGURATION
+   ========================================= */
 :root {
-    --primary-color: #007bff; /* Azul vibrante */
-    --secondary-color: #6c757d; /* Gris para botones secundarios */
-    --background-dark: #1a1a1a; /* Fondo oscuro principal */
-    --background-light: #2c2c2c; /* Fondo para secciones claras (en este tema oscuro) */
-    --text-color: #e0e0e0; /* Texto claro */
-    --heading-color: #ffffff; /* Títulos blancos */
-    --accent-color: #8be9fd; /* Un azul claro para acentos */
-    --border-color: #3a3a3a; /* Borde sutil */
-    --link-hover-color: #56CCF2; /* Otro acento para hover */
-    --skill-tag-bg: rgba(0, 123, 255, 0.1); /* Fondo para tags de skills */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-dark: #1a1a1a;
+    --background-light: #2c2c2c;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --accent-color: #8be9fd;
+    --border-color: #3a3a3a;
+    --link-hover-color: #56CCF2;
+    --skill-tag-bg: rgba(0, 123, 255, 0.1);
     --skill-tag-border: var(--primary-color);
 }
 
-/* Variables CSS para MODO CLARO */
 body.light-mode {
     --primary-color: #007bff;
     --secondary-color: #6c757d;
-    --background-dark: #f8f9fa; /* Fondo claro principal */
-    --background-light: #ffffff; /* Fondo para secciones claras */
-    --text-color: #343a40; /* Texto oscuro */
-    --heading-color: #212529; /* Títulos oscuros */
-    --accent-color: #007bff; /* Azul primario como acento */
-    --border-color: #dee2e6; /* Borde sutil claro */
+    --background-dark: #f8f9fa;
+    --background-light: #ffffff;
+    --text-color: #343a40;
+    --heading-color: #212529;
+    --accent-color: #007bff;
+    --border-color: #dee2e6;
     --link-hover-color: #0056b3;
     --skill-tag-bg: rgba(0, 123, 255, 0.1);
     --skill-tag-border: var(--primary-color);
 }
 
-
-/* Base */
+/* =========================================
+    BASE STYLES & RESET
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +44,7 @@ body {
     color: var(--text-color);
     background-color: var(--background-dark);
     scroll-behavior: smooth;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el modo */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -51,12 +53,14 @@ body {
     padding: 0 20px;
 }
 
-/* Tipografía */
+/* =========================================
+    TYPOGRAPHY
+   ========================================= */
 h1, h2, h3 {
     color: var(--heading-color);
     margin-bottom: 20px;
     line-height: 1.2;
-    transition: color 0.3s ease; /* Transición para títulos */
+    transition: color 0.3s ease;
 }
 
 h1 {
@@ -99,7 +103,9 @@ p {
     font-size: 1.1em;
 }
 
-/* Enlaces y Botones */
+/* =========================================
+    BUTTONS & LINKS
+   ========================================= */
 a {
     color: var(--primary-color);
     text-decoration: none;
@@ -124,11 +130,11 @@ a:hover {
 
 .btn.primary {
     background-color: var(--primary-color);
-    color: #ffffff; /* Siempre blanco para mejor contraste */
+    color: #ffffff;
 }
 
 .btn.primary:hover {
-    background-color: #0056b3; /* Un tono más oscuro */
+    background-color: #0056b3;
     transform: translateY(-2px);
 }
 
@@ -140,16 +146,18 @@ a:hover {
 
 .btn.secondary:hover {
     background-color: var(--secondary-color);
-    color: #ffffff; /* Siempre blanco al hacer hover */
+    color: #ffffff;
     transform: translateY(-2px);
 }
 
-/* Settings Bar (para modo oscuro/claro y idioma) */
+/* =========================================
+    SETTINGS BAR (THEME/LANG)
+   ========================================= */
 .settings-bar {
     position: fixed;
     top: 0;
-    left: 0; /* Asegurar que ocupe todo el ancho */
-    right: 0; /* Asegurar que ocupe todo el ancho */
+    left: 0;
+    right: 0;
     width: 100%;
     background-color: var(--background-dark);
     padding: 10px 0;
@@ -160,7 +168,7 @@ a:hover {
 
 .settings-bar .container {
     display: flex;
-    justify-content: flex-end; /* Alinear a la derecha */
+    justify-content: flex-end;
     align-items: center;
     gap: 15px;
 }
@@ -197,23 +205,23 @@ a:hover {
 
 .btn-lang.active {
     background-color: var(--primary-color);
-    color: #ffffff; /* Siempre blanco */
+    color: #ffffff;
 }
 
 .btn-lang:not(.active):hover {
     background-color: var(--border-color);
 }
 
-
-/* Hero Section */
+/* =========================================
+    HERO SECTION
+   ========================================= */
 .hero-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     text-align: center;
-    padding-top: 70px; /* Para que no quede detrás de la barra de settings */
-    /* Imagen de fondo sutil - puedes cambiar la URL */
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center center/cover;
+    padding-top: 70px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80') no-repeat center center/cover;
 }
 
 .hero-section h1 {
@@ -247,23 +255,26 @@ a:hover {
     color: var(--accent-color);
 }
 
-/* Secciones */
+/* =========================================
+    SECTIONS & LAYOUT
+   ========================================= */
 .section-padding {
-    padding: 100px 0; /* Más padding para separar secciones */
+    padding: 100px 0;
 }
 
 .bg-dark {
-    background-color: var(--background-light); /* Ligeramente más claro para contraste */
+    background-color: var(--background-light);
 }
 
-/* Sobre Mí */
 #about p {
     text-align: left;
     max-width: 800px;
     margin: 0 auto 20px auto;
 }
 
-/* Skills */
+/* =========================================
+    SKILLS SECTION
+   ========================================= */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -302,10 +313,12 @@ a:hover {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Proyectos */
+/* =========================================
+    PROJECTS SECTION
+   ========================================= */
 .project-item {
     display: flex;
-    flex-direction: column; /* Por defecto para mobile, se cambia en desktop */
+    flex-direction: column;
     align-items: center;
     background-color: var(--background-light);
     border-radius: 8px;
@@ -345,7 +358,7 @@ a:hover {
 
 .project-tech span {
     display: inline-block;
-    background-color: var(--background-dark); /* Color de fondo para tags de tecnología */
+    background-color: var(--background-dark);
     color: var(--text-color);
     padding: 5px 10px;
     margin: 3px;
@@ -366,23 +379,25 @@ a:hover {
 .project-links {
     margin-top: 25px;
     display: flex;
-    flex-wrap: wrap; /* Para que los botones se ajusten en mobile */
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-/* Contacto */
+/* =========================================
+    CONTACT SECTION
+   ========================================= */
 #contact {
-    text-align: left; /* Alinear el formulario a la izquierda */
+    text-align: left;
 }
 
 #contact p {
-    text-align: center; /* Centrar los párrafos de introducción */
+    text-align: center;
     margin-bottom: 30px;
 }
 
 #contact-form {
-    max-width: 700px; /* Ancho máximo del formulario */
-    margin: 30px auto 0 auto; /* Centrar el formulario */
+    max-width: 700px;
+    margin: 30px auto 0 auto;
 }
 
 .form-group {
@@ -413,7 +428,7 @@ a:hover {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    background-color: var(--background-dark); /* Mantener fondo oscuro en focus */
+    background-color: var(--background-dark);
 }
 
 .contact-submit-btn {
@@ -423,8 +438,9 @@ a:hover {
     padding: 15px;
 }
 
-
-/* Footer */
+/* =========================================
+    FOOTER
+   ========================================= */
 footer {
     background-color: var(--background-dark);
     color: var(--text-color);
@@ -454,10 +470,11 @@ footer .container {
     color: var(--accent-color);
 }
 
+/* =========================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================= */
 
-/* === Media Queries para Responsividad === */
-
-/* Tablets y Desktops pequeños */
+/* Desktop & Tablets */
 @media (min-width: 768px) {
     .hero-section h1 {
         font-size: 5.5em;
@@ -468,17 +485,17 @@ footer .container {
     }
 
     .project-item {
-        flex-direction: row; /* En desktop, imagen a la izquierda, info a la derecha */
+        flex-direction: row;
         margin-bottom: 80px;
     }
 
-    .project-item:nth-child(even) { /* Proyectos alternados */
+    .project-item:nth-child(even) {
         flex-direction: row-reverse;
     }
 
     .project-item img {
         width: 50%;
-        max-height: 400px; /* Asegura un alto máximo en desktop */
+        max-height: 400px;
         min-width: 400px;
         border-bottom: none;
         border-right: 1px solid var(--border-color);
@@ -498,11 +515,11 @@ footer .container {
     }
 
     .settings-bar .container {
-        justify-content: flex-end; /* Alinear a la derecha en desktop */
+        justify-content: flex-end;
     }
 }
 
-/* Móviles */
+/* Mobile */
 @media (max-width: 767px) {
     h1 {
         font-size: 2.8em;
@@ -537,7 +554,7 @@ footer .container {
     }
     .project-links {
         flex-direction: column;
-        align-items: stretch; /* Estirar botones */
+        align-items: stretch;
     }
     .project-links .btn {
         width: 100%;
@@ -550,8 +567,7 @@ footer .container {
         display: block;
         margin-bottom: 10px;
     }
-
     .settings-bar .container {
-        justify-content: space-between; /* Espaciar en mobile */
+        justify-content: space-between;
     }
 }

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const TRANSLATIONS = {
         es: {
             heroTitle: '¡Hola! Soy <span>Fabrizio</span>',
-            heroSubtitle1: 'Estudiante de <strong>Lic. en Sistemas (UBA)</strong> con perfil técnico-funcional.',
+            heroSubtitle1: '<strong>Full Stack Developer & Data Specialist</strong> con perfil técnico-funcional.',
             heroSubtitle2: 'Busco conectar la estrategia de negocio con soluciones tecnológicas eficientes.',
             heroBtnProjects: 'Ver mis Proyectos',
             heroBtnContact: 'Contactarme',

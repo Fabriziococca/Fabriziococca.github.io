@@ -333,7 +333,6 @@ a:hover {
 .project-gallery {
     width: 100%;
     display: flex;
-    gap: 10px; /* Agregamos un espacio entre foto y foto */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -342,22 +341,23 @@ a:hover {
     padding-bottom: 10px; /* Le damos aire a la barra de scroll */
 }
 
-/* Scrollbar más visible e intuitiva */
+/* Scrollbar AZUL y visible (Mantenemos esto) */
 .project-gallery::-webkit-scrollbar {
-    height: 10px; /* La hacemos más gruesa */
+    height: 10px;
 }
 .project-gallery::-webkit-scrollbar-track {
     background: var(--background-dark);
     border-radius: 5px;
 }
 .project-gallery::-webkit-scrollbar-thumb {
-    background: var(--primary-color); /* La ponemos azul/primaria para que el cliente la vea */
+    background: var(--primary-color); /* Azul primaria para que se vea */
     border-radius: 5px;
 }
 
-/* Imágenes dentro de la galería */
+/* Imágenes dentro de la galería - VOLVEMOS AL 100% */
 .project-gallery img {
-    flex: 0 0 92%; /* 92% para que la segunda foto "asome" un poquito y el cliente sepa que puede scrollear */
+    flex: 0 0 100%; /* OCUPA EL 100% DEL ANCHO (Corregido) */
+    width: 100%;    /* OCUPA EL 100% DEL ANCHO (Corregido) */
     height: auto;
     max-height: 400px;
     object-fit: cover;

@@ -314,7 +314,7 @@ a:hover {
 }
 
 /* =========================================
-    PROJECTS SECTION
+    PROJECTS SECTION & GALLERY
    ========================================= */
 .project-item {
     display: flex;
@@ -329,13 +329,38 @@ a:hover {
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-item img {
+/* Contenedor de la Galería Deslizable (Mobile First) */
+.project-gallery {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Scrollbar personalizada para que quede sutil */
+.project-gallery::-webkit-scrollbar {
+    height: 6px;
+}
+.project-gallery::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+.project-gallery::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 3px;
+}
+
+/* Imágenes dentro de la galería */
+.project-gallery img {
+    flex: 0 0 100%;
     width: 100%;
     height: auto;
     max-height: 400px;
     object-fit: cover;
     display: block;
-    border-bottom: 1px solid var(--border-color);
+    scroll-snap-align: center; /* Hace que la imagen encaje perfecto al deslizar */
 }
 
 .project-info {
@@ -367,13 +392,8 @@ a:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.project-highlights code {
-    background-color: var(--background-dark);
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-family: 'Courier New', Courier, monospace;
+.project-highlights strong {
     color: var(--accent-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-links {
@@ -493,17 +513,22 @@ footer .container {
         flex-direction: row-reverse;
     }
 
-    .project-item img {
+    /* Adaptación de la galería para Desktop */
+    .project-gallery {
         width: 50%;
-        max-height: 400px;
         min-width: 400px;
         border-bottom: none;
         border-right: 1px solid var(--border-color);
     }
     
-    .project-item:nth-child(even) img {
+    .project-item:nth-child(even) .project-gallery {
         border-right: none;
         border-left: 1px solid var(--border-color);
+    }
+
+    /* Mantener altura máxima en Desktop */
+    .project-gallery img {
+        max-height: 400px;
     }
 
     .project-info {
@@ -546,7 +571,7 @@ footer .container {
     .project-item {
         margin-bottom: 30px;
     }
-    .project-item img {
+    .project-gallery img {
         max-height: 250px;
     }
     .project-info {

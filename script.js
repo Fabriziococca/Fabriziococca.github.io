@@ -14,59 +14,81 @@ document.addEventListener('DOMContentLoaded', () => {
     const TRANSLATIONS = {
         es: {
             heroTitle: '¡Hola! Soy <span>Fabrizio</span>',
-            heroSubtitle1: '<strong>Full Stack Developer & Data Specialist</strong> con perfil técnico-funcional.',
-            heroSubtitle2: 'Busco conectar la estrategia de negocio con soluciones tecnológicas eficientes.',
-            heroBtnProjects: 'Ver mis Proyectos',
-            heroBtnContact: 'Contactarme',
-            aboutTitle: 'Sobre Mí',
-            aboutP1: 'Como estudiante avanzado de la <strong>Licenciatura en Sistemas en la UBA</strong>, combino la visión sistémica de las organizaciones con la capacidad de ejecución técnica.',
-            aboutP2: 'Busco un rol donde pueda aplicar mi capacidad de análisis para optimizar procesos, asegurando que el software entregado aporte valor real al usuario final. Entiendo el lenguaje del negocio y la lógica de la programación, facilitando la comunicación en los proyectos.',
-            aboutP3: '<strong>Áreas de interés:</strong> Análisis Funcional, Arquitectura de Software, Automatización de Procesos, Cloud Computing (SaaS) y Metodologías Ágiles.',
-            skillsTitle: 'Herramientas y Tecnologías',
-            skillsLangTitle: 'Backend & Cloud',
-            skillsFrontTitle: 'Frontend & Diseño',
-            skillsDbToolsTitle: 'Análisis & Gestión',
-            projectsTitle: 'Proyectos Destacados',
-            project1Title: 'Sistema SaaS de Gamificación y Analytics',
-            project1Desc: 'Desarrollo y despliegue de una solución automatizada para maximizar el crecimiento de comunidades digitales. El sistema intercepta eventos en tiempo real, procesa métricas de participación y gestiona un ranking persistente en la base de datos para incentivar la actividad de los usuarios.',
-            project1Highlight: '<strong>Highlights:</strong> Arquitectura serverless con uptime 24/7, base de datos relacional (PostgreSQL) y lógica multitenant (soporte para múltiples servidores aislados).',
-            projectBtnLive: '🚀 Ver Demo',
-            projectBtnCode: '💻 Ver Repositorio',
-            contactTitle: '¿Hablemos?',
-            contactP1: 'En búsqueda activa de nuevas oportunidades profesionales como <strong>Analista Funcional o Desarrollador</strong>.',
-            contactP2: 'Listo para aportar visión analítica, documentación técnica y soluciones de software concretas al equipo.',
-            contactFormName: 'Nombre',
-            contactFormEmail: 'Tu Email',
-            contactFormMessage: 'Mensaje',
+            heroSubtitle1: '<strong>Consultor Tecnológico & Arquitecto Backend</strong>',
+            heroSubtitle2: 'Transformo tareas manuales y cuellos de botella operativos en ecosistemas automatizados y rentables.',
+            heroBtnProjects: 'Ver Soluciones B2B',
+            heroBtnContact: 'Agendar Contacto',
+            
+            aboutTitle: 'Estrategia & Ejecución',
+            aboutP1: 'Mi perfil se centra en la intersección exacta entre la <strong>estrategia de negocio y la ejecución técnica</strong>. Entiendo el "qué" necesita una empresa para optimizar sus procesos y sé exactamente "cómo" se construye a nivel de arquitectura y código.',
+            aboutP2: 'Como estudiante de la Lic. en Sistemas (UBA) y Consultor Independiente, diseño ecosistemas digitales para automatizar flujos de trabajo, ahorrar cientos de horas-hombre y evitar que los requerimientos se pierdan en la traducción entre el cliente y el servidor.',
+            aboutP3: '<strong>Mis Especialidades:</strong> Arquitectura Backend, Agentes de Inteligencia Artificial (NLP), Web Scraping B2B, Automatización RPA y Análisis Funcional.',
+            
+            skillsTitle: 'Stack Tecnológico & Habilidades',
+            skillsLangTitle: 'Backend & Arquitectura',
+            skillsFrontTitle: 'Automatización & IA',
+            skillsDbToolsTitle: 'Datos & Cloud',
+            
+            projectsTitle: 'Casos de Éxito & Soluciones',
+            
+            project1Title: 'Agente de Ventas IA (WhatsApp)',
+            project1Desc: 'Arquitectura y desarrollo de un Asistente Virtual Inteligente integrado a la API oficial de WhatsApp. El sistema pre-califica leads, procesa audios de voz de clientes, calcula costos dinámicamente y registra ventas en bases de datos en tiempo real, operando 24/7 sin intervención humana.',
+            project1Highlight: '<strong>El Impacto:</strong> Eliminación de tiempos de espera en atención al cliente y automatización total del registro de pedidos.',
+            
+            project2Title: 'Motor de Web Scraping B2B (ETL)',
+            project2Desc: 'Desarrollo de un pipeline de extracción de datos autónomo para generar leads altamente segmentados. El script navega directorios web complejos, maneja rotación de sesiones para evitar bloqueos y aplica ingeniería inversa para limpiar HTML desestructurado, exportando bases de datos listas para CRM.',
+            project2Highlight: '<strong>El Impacto:</strong> Generación de miles de contactos comerciales verificados en horas, superando la calidad de los barridos tradicionales.',
+            
+            project3Title: 'Bot RPA Híbrido: Automatización Masiva',
+            project3Desc: 'Diseño de un ecosistema de automatización robusto capaz de operar jornadas de 18 horas sin supervisión. El bot sincroniza acciones entre un navegador web y un emulador móvil simultáneamente, aplicando visión artificial para el reconocimiento de patrones y toma de decisiones en pantalla.',
+            project3Highlight: '<strong>El Impacto:</strong> Reducción del 100% de la carga operativa manual en tareas críticas de validación de identidad.',
+            
+            contactTitle: '¿Optimizamos tu negocio?',
+            contactP1: 'Estoy abierto a <strong>roles estratégicos (Analista Funcional, Arquitecto de Soluciones)</strong> y a colaboraciones B2B con empresas que necesiten automatizar sus operaciones.',
+            contactP2: 'Dejame tu mensaje y evaluamos la viabilidad técnica de tu proyecto o vacante.',
+            contactFormName: 'Nombre / Empresa',
+            contactFormEmail: 'Email corporativo o personal',
+            contactFormMessage: '¿En qué puedo ayudarte?',
             contactFormSubmit: 'Enviar Mensaje',
             footerRights: 'Todos los derechos reservados.'
         },
         en: {
             heroTitle: 'Hi! I\'m <span>Fabrizio</span>',
-            heroSubtitle1: 'I\'m an <strong>Information Systems student (UBA)</strong> with a technical-functional profile.',
-            heroSubtitle2: 'I seek to connect business strategy with efficient technological solutions.',
-            heroBtnProjects: 'View My Projects',
-            heroBtnContact: 'Contact Me',
-            aboutTitle: 'About Me',
-            aboutP1: 'As an advanced student of <strong>Information Systems at UBA</strong>, I combine a systemic view of organizations with technical execution skills.',
-            aboutP2: 'I look for roles where I can apply my analytical skills to optimize processes, ensuring software delivers real value to the end user. I understand business language and programming logic, facilitating communication in projects.',
-            aboutP3: '<strong>Interests:</strong> Functional Analysis, Software Architecture, Process Automation, Cloud Computing (SaaS), and Agile Methodologies.',
-            skillsTitle: 'Tools & Technologies',
-            skillsLangTitle: 'Backend & Cloud',
-            skillsFrontTitle: 'Frontend & Design',
-            skillsDbToolsTitle: 'Analysis & Management',
-            projectsTitle: 'Featured Projects',
-            project1Title: 'Gamification & Analytics SaaS System',
-            project1Desc: 'Development and deployment of an automated solution to maximize digital community growth. The system intercepts real-time events, processes engagement metrics, and manages a persistent cloud leaderboard to incentivize user activity.',
-            project1Highlight: '<strong>Highlights:</strong> Serverless architecture with 24/7 uptime, relational database (PostgreSQL), and multitenant logic (support for isolated multiple servers).',
-            projectBtnLive: '🚀 View Demo',
-            projectBtnCode: '💻 View Repository',
-            contactTitle: 'Let\'s Talk?',
-            contactP1: 'Actively looking for professional opportunities as a <strong>Functional Analyst or Developer</strong>.',
-            contactP2: 'Ready to contribute analytical vision, technical documentation, and concrete software solutions to the team.',
-            contactFormName: 'Name',
-            contactFormEmail: 'Your Email',
-            contactFormMessage: 'Message',
+            heroSubtitle1: '<strong>Tech Consultant & Backend Architect</strong>',
+            heroSubtitle2: 'I transform manual tasks and operational bottlenecks into automated, profitable ecosystems.',
+            heroBtnProjects: 'View B2B Solutions',
+            heroBtnContact: 'Schedule Contact',
+            
+            aboutTitle: 'Strategy & Execution',
+            aboutP1: 'My profile is centered at the exact intersection of <strong>business strategy and technical execution</strong>. I understand "what" a company needs to optimize its processes, and I know exactly "how" to build it at the architecture and code level.',
+            aboutP2: 'As an Information Systems student (UBA) and Independent Consultant, I design digital ecosystems to automate workflows, save hundreds of man-hours, and prevent requirements from getting lost in translation between the client and the server.',
+            aboutP3: '<strong>My Specialties:</strong> Backend Architecture, AI Agents (NLP), B2B Web Scraping, RPA Automation, and Functional Analysis.',
+            
+            skillsTitle: 'Tech Stack & Skills',
+            skillsLangTitle: 'Backend & Architecture',
+            skillsFrontTitle: 'Automation & AI',
+            skillsDbToolsTitle: 'Data & Cloud',
+            
+            projectsTitle: 'Success Cases & Solutions',
+            
+            project1Title: 'AI Sales Agent (WhatsApp)',
+            project1Desc: 'Architecture and development of an Intelligent Virtual Assistant integrated with the official WhatsApp API. The system pre-qualifies leads, processes customer voice audios, dynamically calculates costs, and logs sales into databases in real-time, operating 24/7 without human intervention.',
+            project1Highlight: '<strong>The Impact:</strong> Elimination of customer service wait times and full automation of order logging.',
+            
+            project2Title: 'B2B Web Scraping Engine (ETL)',
+            project2Desc: 'Development of an autonomous data extraction pipeline to generate highly segmented leads. The script navigates complex web directories, handles session rotation to prevent bans, and applies reverse engineering to clean unstructured HTML, exporting CRM-ready databases.',
+            project2Highlight: '<strong>The Impact:</strong> Generation of thousands of verified commercial contacts in hours, vastly outperforming traditional web sweeps.',
+            
+            project3Title: 'Hybrid RPA Bot: Massive Automation',
+            project3Desc: 'Design of a robust automation ecosystem capable of operating for 18-hour shifts without supervision. The bot synchronizes actions between a web browser and a mobile emulator simultaneously, applying computer vision for pattern recognition and on-screen decision making.',
+            project3Highlight: '<strong>The Impact:</strong> 100% reduction of manual operational load in critical identity validation tasks.',
+            
+            contactTitle: 'Let\'s optimize your business?',
+            contactP1: 'I am open to <strong>strategic roles (Functional Analyst, Solutions Architect)</strong> and B2B collaborations with companies needing to automate their operations.',
+            contactP2: 'Leave me a message and let\'s evaluate the technical feasibility of your project or job opening.',
+            contactFormName: 'Name / Company',
+            contactFormEmail: 'Corporate or personal email',
+            contactFormMessage: 'How can I help you?',
             contactFormSubmit: 'Send Message',
             footerRights: 'All rights reserved.'
         }
@@ -76,24 +98,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // THEME LOGIC
     // =========================================
     function setTheme(themeName) {
-        // 1. Update Class
         DOM.body.classList.remove('light-mode', 'dark-mode');
         DOM.body.classList.add(themeName);
         
-        // 2. Update Icon
         const isDark = themeName === 'dark-mode';
         DOM.themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
         DOM.themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-
-        // 3. Persist
         localStorage.setItem('theme', themeName);
     }
 
-    // Initialize Theme
     const savedTheme = localStorage.getItem('theme') || 'dark-mode';
     setTheme(savedTheme);
 
-    // Toggle Handler
     DOM.themeToggle.addEventListener('click', () => {
         const newTheme = DOM.body.classList.contains('dark-mode') ? 'light-mode' : 'dark-mode';
         setTheme(newTheme);
@@ -103,12 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // LANGUAGE LOGIC
     // =========================================
     function setLanguage(lang) {
-        // 1. Update UI Buttons
         DOM.langButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
 
-        // 2. Update Content
         DOM.translatableElements.forEach(element => {
             const key = element.dataset.key;
             if (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) {
@@ -116,12 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // 3. Persist
         document.documentElement.lang = lang;
         localStorage.setItem('lang', lang);
     }
 
-    // Initialize Language
     const savedLang = localStorage.getItem('lang') || 'es';
     setLanguage(savedLang);
 
@@ -139,8 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = DOM.contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerText;
             
-            // UI Feedback: Loading state
-            submitBtn.innerText = 'Enviando...';
+            submitBtn.innerText = 'Enviando... / Sending...';
             submitBtn.disabled = true;
 
             const formData = new FormData(event.target);
@@ -153,16 +164,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    alert("¡Mensaje enviado con éxito! Gracias por contactarme.");
+                    alert("¡Mensaje enviado con éxito! / Message sent successfully!");
                     DOM.contactForm.reset();
                 } else {
                     throw new Error('Formspree error');
                 }
             } catch (error) {
-                alert("Hubo un problema al enviar el mensaje. Por favor intenta nuevamente.");
+                alert("Hubo un problema al enviar el mensaje. / There was a problem sending your message.");
                 console.error('Submission error:', error);
             } finally {
-                // Restore button state
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
             }

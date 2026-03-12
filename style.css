@@ -277,7 +277,7 @@ a:hover {
    ========================================= */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* ¡ACÁ ESTÁ EL CAMBIO CLAVE! */
+    grid-template-columns: repeat(2, 1fr); /* Grilla 2x2 para Desktop */
     gap: 30px;
     text-align: center;
     margin-top: 40px;
@@ -592,6 +592,12 @@ footer .container {
     .skill-category {
         padding: 20px 10px;
     }
+    
+    /* ACÁ AGREGAMOS LA REGLA PARA QUE EN MOBILE SEA 1 SOLA COLUMNA */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .footer-social a {
         display: block;
         margin-bottom: 10px;

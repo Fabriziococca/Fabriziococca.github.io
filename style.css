@@ -277,7 +277,7 @@ a:hover {
    ========================================= */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* ¡ACÁ ESTÁ EL CAMBIO CLAVE! */
     gap: 30px;
     text-align: center;
     margin-top: 40px;
@@ -356,8 +356,8 @@ a:hover {
 
 /* Imágenes dentro de la galería - VOLVEMOS AL 100% */
 .project-gallery img {
-    flex: 0 0 100%; /* OCUPA EL 100% DEL ANCHO (Corregido) */
-    width: 100%;    /* OCUPA EL 100% DEL ANCHO (Corregido) */
+    flex: 0 0 100%; /* OCUPA EL 100% DEL ANCHO */
+    width: 100%;    /* OCUPA EL 100% DEL ANCHO */
     height: auto;
     max-height: 400px;
     object-fit: cover;

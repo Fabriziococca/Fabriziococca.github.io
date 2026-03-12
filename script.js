@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const TRANSLATIONS = {
         es: {
             heroTitle: '¡Hola! Soy <span>Fabrizio</span>',
-            heroSubtitle1: '<strong>Consultor Tecnológico & Arquitecto Backend</strong>',
+            heroSubtitle1: '<strong>Consultor Full-Stack & Experto en Automatizaciones (Python + n8n)</strong>',
             heroSubtitle2: 'Transformo tareas manuales y cuellos de botella operativos en ecosistemas automatizados y rentables.',
             heroBtnProjects: 'Ver Soluciones B2B',
             heroBtnContact: 'Agendar Contacto',
@@ -22,12 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutTitle: 'Estrategia & Ejecución',
             aboutP1: 'Mi perfil se centra en la intersección exacta entre la <strong>estrategia de negocio y la ejecución técnica</strong>. Entiendo el "qué" necesita una empresa para optimizar sus procesos y sé exactamente "cómo" se construye a nivel de arquitectura y código.',
             aboutP2: 'Como estudiante de la Lic. en Sistemas (UBA) y Consultor Independiente, diseño ecosistemas digitales para automatizar flujos de trabajo, ahorrar cientos de horas-hombre y evitar que los requerimientos se pierdan en la traducción entre el cliente y el servidor.',
-            aboutP3: '<strong>Mis Especialidades:</strong> Arquitectura Backend, Agentes de Inteligencia Artificial (NLP), Web Scraping B2B, Automatización RPA y Análisis Funcional.',
+            aboutP3: '<strong>Mis Especialidades:</strong> Arquitectura Backend (Python), Orquestación con n8n, Dashboards a Medida (JS/Tailwind), Agentes IA y Web Scraping B2B.',
             
             skillsTitle: 'Stack Tecnológico & Habilidades',
             skillsLangTitle: 'Backend & Arquitectura',
             skillsFrontTitle: 'Automatización & IA',
-            skillsDbToolsTitle: 'Datos & Cloud',
+            skillsUiTitle: 'Frontend & Dashboards',
+            skillsDbToolsTitle: 'Infraestructura & Datos',
             
             projectsTitle: 'Casos de Éxito & Soluciones',
             
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             project2Highlight: '<strong>El Impacto:</strong> Generación de miles de contactos comerciales verificados en horas, superando la calidad de los barridos tradicionales.',
             
             project3Title: 'Bot RPA Híbrido: Automatización Masiva',
-            project3Desc: 'Diseño de un ecosistema de automatización robusto capaz de operar jornadas de 18 horas sin supervisión. El bot sincroniza acciones entre un navegador web y un emulador móvil simultáneamente, aplicando visión artificial para el reconocimiento de patrones y toma de decisiones en pantalla.',
+            project3Desc: 'Diseño de un ecosistema de automatización robusto capaz de operar jornadas de 18 horas sin supervisión. El bot sincroniza acciones entre un navegador web y un emulador móvil simultáneamente, aplicando visión artificial para el reconocimiento de patrones y toma de decisiones en pantalla. Todo gestionado desde un panel de control web a medida para el cliente.',
             project3Highlight: '<strong>El Impacto:</strong> Reducción del 100% de la carga operativa manual en tareas críticas de validación de identidad.',
             
             contactTitle: '¿Optimizamos tu negocio?',
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         en: {
             heroTitle: 'Hi! I\'m <span>Fabrizio</span>',
-            heroSubtitle1: '<strong>Tech Consultant & Backend Architect</strong>',
+            heroSubtitle1: '<strong>Full-Stack Consultant & Automation Expert (Python + n8n)</strong>',
             heroSubtitle2: 'I transform manual tasks and operational bottlenecks into automated, profitable ecosystems.',
             heroBtnProjects: 'View B2B Solutions',
             heroBtnContact: 'Schedule Contact',
@@ -62,12 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutTitle: 'Strategy & Execution',
             aboutP1: 'My profile is centered at the exact intersection of <strong>business strategy and technical execution</strong>. I understand "what" a company needs to optimize its processes, and I know exactly "how" to build it at the architecture and code level.',
             aboutP2: 'As an Information Systems student (UBA) and Independent Consultant, I design digital ecosystems to automate workflows, save hundreds of man-hours, and prevent requirements from getting lost in translation between the client and the server.',
-            aboutP3: '<strong>My Specialties:</strong> Backend Architecture, AI Agents (NLP), B2B Web Scraping, RPA Automation, and Functional Analysis.',
+            aboutP3: '<strong>My Specialties:</strong> Backend Architecture (Python), n8n Orchestration, Custom Dashboards (JS/Tailwind), AI Agents, and B2B Web Scraping.',
             
             skillsTitle: 'Tech Stack & Skills',
             skillsLangTitle: 'Backend & Architecture',
             skillsFrontTitle: 'Automation & AI',
-            skillsDbToolsTitle: 'Data & Cloud',
+            skillsUiTitle: 'Frontend & Dashboards',
+            skillsDbToolsTitle: 'Infrastructure & Data',
             
             projectsTitle: 'Success Cases & Solutions',
             
@@ -80,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             project2Highlight: '<strong>The Impact:</strong> Generation of thousands of verified commercial contacts in hours, vastly outperforming traditional web sweeps.',
             
             project3Title: 'Hybrid RPA Bot: Massive Automation',
-            project3Desc: 'Design of a robust automation ecosystem capable of operating for 18-hour shifts without supervision. The bot synchronizes actions between a web browser and a mobile emulator simultaneously, applying computer vision for pattern recognition and on-screen decision making.',
+            project3Desc: 'Design of a robust automation ecosystem capable of operating for 18-hour shifts without supervision. The bot synchronizes actions between a web browser and a mobile emulator simultaneously, applying computer vision for pattern recognition and on-screen decision making. Everything is managed from a custom-built web control panel.',
             project3Highlight: '<strong>The Impact:</strong> 100% reduction of manual operational load in critical identity validation tasks.',
             
             contactTitle: 'Let\'s optimize your business?',
